@@ -1,6 +1,7 @@
 #CONTROL PRINCIPAL DEL CODIGO
 import pygame
 import sys
+from PersonajePrincipal import PersonajePrincipal
 pygame.init()
 
 BLANCO = (255,255,255)
@@ -20,13 +21,15 @@ def control_juego():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
+#CREAR PERSONAJE
+player = PersonajePrincipal(50,50,30,30,AZUL)
 #JUEGO
             
 while True:
-    screen.fill(AZUL)
+    screen.fill(VERDE)
 
     control_juego()
+    player.render(screen)
 
     pygame.display.flip()
 
