@@ -1,9 +1,9 @@
 import pygame
-from ObjectoJuego import ObjectoJuego as Objeto
+from objectoJuego import ObjectoJuego as Objeto
 class PersonajePrincipal(Objeto):
     def __init__(self,x,y,width,height,color):
         super().__init__(x,y,width,height,color)
-        self.velocidad = 15
+        self.velocidad = 10
 
         
     def mover(self,aumentarX,aumentarY):
